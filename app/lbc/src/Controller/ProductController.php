@@ -25,6 +25,12 @@ class ProductController extends AbstractController
     {
         // Get Product
         $product = $this->getDoctrine()->getManager()->getRepository(Product::class)->findAll();
+        // Bad Request
+        if ($product == NULL)
+            return new JsonResponse(
+                ["Message" => "No product exist, Retry later."],
+                Response::HTTP_BAD_REQUEST
+            );
         $productJson = Product::createJsonAll($product);
 
         return new JsonResponse(
@@ -40,9 +46,16 @@ class ProductController extends AbstractController
     {
         $manager = $this->getDoctrine()->getManager();
 
-        $search = $manager->getRepository(Product::class)->search($search);
+        $product = $manager->getRepository(Product::class)->search($search);
         
-        $productJson = Product::createJsonAll($search);
+        // Bad Request
+        if ($product == NULL)
+            return new JsonResponse(
+                ["Message" => "No product exist, Retry later."],
+                Response::HTTP_BAD_REQUEST
+            );
+
+        $productJson = Product::createJsonAll($product);
 
         return new JsonResponse(
             [["Message" => "OK"], $productJson],
