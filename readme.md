@@ -60,3 +60,5 @@ En restant de le cadre de la demande
     - Je ne me suis pas préocupé de cette notion dans le cadre de cette REST, mais naturellement c'est un point à prendre en compte pour certaine route.
 - 404
     - Gestion des routes en erreur.
+- Services
+    - Mise en place de services afin de libérer les controllers.    
