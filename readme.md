@@ -58,4 +58,5 @@ En restant de le cadre de la demande
     - Par manque de compétence et de temps, cette fonctionnalité n'a pas été livré, je suis conscient qu'il me faut évoluer sur ce point.
 - Sécurité
     - Je ne me suis pas préocupé de cette notion dans le cadre de cette REST, mais naturellement c'est un point à prendre en compte pour certaine route.
-
+- 404
+    - Gestion des routes en erreur.
