@@ -47,7 +47,7 @@ DELETE | product | ```curl -L -X DELETE 'http://127.0.0.1:8080/api/v1/product/40
 
 # Point d'amélioration
 
-En restant de le cadre de la demande 
+En restant dans le cadre de la demande 
 
 - Entité Product
     - Options1 & 2, deviendraient Options avec un ManyToMany.
